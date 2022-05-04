@@ -1,0 +1,16 @@
+<div class="container">
+    <p></p>
+    <button class="btn btn-danger" (click)="onNewGroup()" *ngIf="authService.isAdmin()">New Group</button>
+<p></p>
+    <table class="table table-striped">
+    <tr>
+        <th>ID</th>
+        <th>Task Name</th>
+    </tr>
+    <tr *ngFor="let g of groups">
+        <td>{{g.id}}</td>
+         <td>{{g.privileged}}</td>
+    </tr>
+    </table>
+    </div>
+    
